@@ -10,7 +10,7 @@ nav {
 }
 
 section{
-  padding: 20px;
+  padding: 40px;
 }
 
 .hero{
@@ -22,7 +22,7 @@ section{
   /* align-self: center; */
   padding-left: 150px;
   padding-right: 150px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -30,18 +30,43 @@ section{
   .hero--photo-grid{
     padding: 10px;
   }
+
+  section{
+    padding: 20px;
+  }  
 }
 
 
 .hero--header{
   font-size: xx-large;
   margin-bottom: 16px;
-  padding-left: 20px;
 
 }
 
 .hero--text {
   font-size: normal;
   margin-top: 0;
-  padding-left: 20px;
+}
+
+.card{
+  width: 175px;
+  font-size: 12px;
+}
+
+.card--image{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--star {
+  height: 14px;
+}
+
+.gray {
+  color: #918E9B;
 }
