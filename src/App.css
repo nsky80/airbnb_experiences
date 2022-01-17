@@ -8,3 +8,40 @@ nav {
 .nav--logo {
   max-width: 100px;
 }
+
+section{
+  padding: 20px;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--photo-grid{
+  /* align-self: center; */
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* for mobile and tablet: */
+  .hero--photo-grid{
+    padding: 10px;
+  }
+}
+
+
+.hero--header{
+  font-size: xx-large;
+  margin-bottom: 16px;
+  padding-left: 20px;
+
+}
+
+.hero--text {
+  font-size: normal;
+  margin-top: 0;
+  padding-left: 20px;
+}
