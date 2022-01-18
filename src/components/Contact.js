@@ -6,19 +6,19 @@ import mail_icon from "../images/mail-icon.png"
 We can de-strucure the props like
 */
 
-export default function Contact({img, name, phone, email}) {
-    // console.log(props)
+export default function Contact(props) {
+    console.log(props)
     return (
         <div className="contact-card">
-            <img src={img}/>
-            <h3>{name}</h3>
+            <img src={props.img}/>
+            <h3>{props.name}</h3>
             <div className="info-group">
                 <img src={phone_icon} />
-                <p>{phone}</p>
+                <p>{props.phone}</p>
             </div>
             <div className="info-group">
                 <img src={mail_icon} />
-                <p>{email}</p>
+                <p>{props.email}</p>
             </div>
         </div>
     )

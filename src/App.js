@@ -20,6 +20,16 @@ This is how props will received at Contact function:
 */
 
 
+/*
+Challenge: Think critically - how would you pass in a prop that wasn't
+a string datatype.
+
+E.g. Say you want each Joke component to receive an "upvotes" and "downvotes"
+prop that is a number, as well as a prop with an array of comments, and a boolean
+of whether the joke is a pun (`isPun`).
+*/
+
+
 function App(){
   return (
     <div>
@@ -27,11 +37,16 @@ function App(){
       {/* <Hero /> */}
       {/* <Card /> */}
 
+{/* Passing parameters other than string */}
       <Contact 
                 img={mr_whiskerson}
                 name="Mr. Whiskerson"
                 phone="(212) 555-1234"
                 email="mr.whiskaz@catnap.meow"
+                isPet={true}
+                upvotes={10}
+                downvotes={2}
+                comments={[{author: "", body: "", title: ""}]}
             />
             <Contact 
                 img={fluffykins}
