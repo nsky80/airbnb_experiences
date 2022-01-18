@@ -16,22 +16,22 @@ Notes:
   currently are, so don't worry about the fact that you're hard-coding all
   this data into the component.
 */
-import katie_zaferes from "../images/katie-zaferes.png"
+
 import star from "../images/star.png"
 
-export default function Card() {
+export default function Card(props) {
     return (
       <section>
         <div className="card">
-          <img src={katie_zaferes} alt="Avatar" className="card--image"/>
+          <img src={props.img} alt="Avatar" className="card--image"/>
           <div className="card--stats">
             <img src={star} alt="rating" className="card--star" />
-            <span>5</span>
-            <span className="gray">(6) • </span>
-            <span className="gray">USA</span>
+            <span>{props.rating}</span>
+            <span className="gray">({props.reviewCount}) • </span>
+            <span className="gray">{props.country}</span>
           </div>
-          <p>Life lessions with katie_zaferes</p>
-          <p><b>From $136</b>/person</p>
+          <p>{props.title}</p>
+          <p><b>From ${props.price}</b>/person</p>
         </div>
 
       </section>
