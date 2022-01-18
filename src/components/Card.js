@@ -17,7 +17,7 @@ Notes:
   this data into the component.
 */
 
-import star from "../images/star.png"
+// import star from ".../images/star.png"
 
 export default function Card(props) {
     return (
@@ -25,7 +25,7 @@ export default function Card(props) {
         <div className="card">
           <img src={props.img} alt="Avatar" className="card--image"/>
           <div className="card--stats">
-            <img src={star} alt="rating" className="card--star" />
+            <img src="/images/star.png" alt="rating" className="card--star" />
             <span>{props.rating}</span>
             <span className="gray">({props.reviewCount}) • </span>
             <span className="gray">{props.country}</span>
