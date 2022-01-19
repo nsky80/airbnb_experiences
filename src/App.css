@@ -25,18 +25,6 @@ section{
   padding-top: 20px;
 }
 
-@media only screen and (max-width: 768px) {
-  /* for mobile and tablet: */
-  .hero--photo-grid{
-    padding: 10px;
-  }
-
-  section{
-    padding: 20px;
-  }  
-}
-
-
 .hero--header{
   font-size: xx-large;
   margin-bottom: 16px;
@@ -54,6 +42,7 @@ section{
     flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
+	padding:0px 40px 0px 40px;
 }
 
 .card {
@@ -104,3 +93,21 @@ section{
 .gray {
   color: #918E9B;
 }
+
+
+@media only screen and (max-width: 768px) {
+	/* for mobile and tablet: */
+	.hero--photo-grid{
+	  padding: 10px;
+	}
+  
+	.cards-list {
+	  padding:0px 20px 0px 20px;
+  }
+  
+	section{
+	  padding: 20px;
+	}  
+  }
+  
+  

@@ -21,13 +21,7 @@ still be block elements, stacked vertically. We'll add styling later.
 function App() {
 	const dataArray = data.map(prod => <Card
 		key={prod.id}
-		title={prod.title}
-		description={prod.description}
-		price={prod.price}
-		coverImg={prod.coverImg}
-		stats={prod.stats}
-		location={prod.location}
-		openSpots={prod.openSpots}
+		item={prod}
 	/>)
 
 	// console.log
@@ -36,7 +30,7 @@ function App() {
 			<Navbar />
 			<Hero />
 			<div className='cards-list'>
-				{dataArray}
+					{dataArray}
 			</div>
 		</div>
 	)
