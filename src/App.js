@@ -2,34 +2,42 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from "./components/Hero"
 import Card from "./components/Card"
+import data from "./data"
 // import katie_zaferes from "../images/katie-zaferes.png"
 
 /*
-Challenge: Pass props to the Card component and display that data
+/*
+Challenge:
 
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
+- import the array of data from data.js
+- map over the array to create <Card /> components
+- display the array of card components under the navbar
+  (in place of the current <Card /> component)
 
+Note: We haven't styled the group of components yet, so they'll
+still be block elements, stacked vertically. We'll add styling later.
 */
-// To use images from public folder, we are using URLs instead of importing it from images folder.
-// https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory
+
 function App() {
+	const dataArray = data.map(prod => <Card
+		key={prod.id}
+		title={prod.title}
+		description={prod.description}
+		price={prod.price}
+		coverImg={prod.coverImg}
+		stats={prod.stats}
+		location={prod.location}
+		openSpots={prod.openSpots}
+	/>)
+
+	// console.log
 	return (
 		<div>
 			<Navbar />
-			{/* <Hero /> */}
-			<Card
-				img="/images/katie-zaferes.png"
-				rating={5.0}
-				reviewCount={6}
-				country="USA"
-				title="Life Lessons with Katie Zaferes"
-				price={136}
-			/>
+			<Hero />
+			<div className='cards-list'>
+				{dataArray}
+			</div>
 		</div>
 	)
 }
