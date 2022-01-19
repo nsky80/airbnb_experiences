@@ -29,8 +29,8 @@ Notes:
         /*
     Challenge: Fix our component! 😱
     */
-export default function Card(param) {
-  let props = param.item
+export default function Card(props) {
+  // let props = param.item
   let badgeText
   if (props.openSpots === 0) {
       badgeText = "SOLD OUT"

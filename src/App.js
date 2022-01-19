@@ -19,9 +19,11 @@ still be block elements, stacked vertically. We'll add styling later.
 */
 
 function App() {
+	// We can pass the object directly by unpacking it as follows:
+	// ... will unpack and pass it to the function
 	const dataArray = data.map(prod => <Card
 		key={prod.id}
-		item={prod}
+		{...prod}
 	/>)
 
 	// console.log
